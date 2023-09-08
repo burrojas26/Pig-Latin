@@ -15,23 +15,22 @@ public class PigLatin {
             if (origPhrase.charAt(i) == ' ') {
                 phrase = origPhrase.substring(0, i);
                 origPhrase = origPhrase.substring(i+1, origPhrase.length());
-                System.out.println(phrase);
                 if (phrase.charAt(0) == 'a' || phrase.charAt(0) == 'e' || phrase.charAt(0) == 'i' || phrase.charAt(0) == 'o' || phrase.charAt(0) == 'u') {
                     edited = phrase + "way ";
                 }
                 else {
-                    edited = phrase.substring(1, phrase.length()) + phrase.substring(0, 1) + "ay";
+                    edited = phrase.substring(1, phrase.length()) + phrase.substring(0, 1) + "ay ";
                 }
                 len = phrase.length();
+                i = 0;
             }
-            else {
-                if (phrase.charAt(0) == 'a' || phrase.charAt(0) == 'e' || phrase.charAt(0) == 'i' || phrase.charAt(0) == 'o' || phrase.charAt(0) == 'u') {
-                    edited += phrase + "way ";
-                }
-                else {
-                    edited += phrase.substring(1, phrase.length()) + phrase.substring(0, 1) + "ay ";
-                }
-            }
+            
+        }
+        if (origPhrase.charAt(0) == 'a' || origPhrase.charAt(0) == 'e' || origPhrase.charAt(0) == 'i' || origPhrase.charAt(0) == 'o' || origPhrase.charAt(0) == 'u') {
+            edited += phrase + "way ";
+        }
+        else {
+            edited += origPhrase.substring(1, origPhrase.length()) + origPhrase.substring(0, 1) + "ay";
         }
         System.out.println(edited);
         
