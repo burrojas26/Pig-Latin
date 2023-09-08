@@ -5,12 +5,20 @@ import java.util.Scanner;
 public class PigLatin {
     public static void main(String[] args) {
         String phrase = "";
+        String edited = "";
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter phrase: ");
-        phrase = scan.nextLine();
+        phrase = scan.nextLine().toLowerCase();
         int len = phrase.length();
-        if (phrase)
-        String edited = phrase.substring(1, len) + phrase.substring(0, 1) + "ay";
+        for (int i = 0; i < len; i++) {
+            if (phrase.charAt(i) == ' ')
+        }
+        if (phrase.charAt(0) == 'a' || phrase.charAt(0) == 'e' || phrase.charAt(0) == 'i' || phrase.charAt(0) == 'o' || phrase.charAt(0) == 'u') {
+            edited = phrase + "way";
+        }
+        else {
+            edited = phrase.substring(1, len) + phrase.substring(0, 1) + "ay";
+        }
         System.out.println(edited);
     }
 }
