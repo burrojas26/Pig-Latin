@@ -1,4 +1,4 @@
-//Jasper Burroughs 9/8/2023 Pig Latin Project
+//Jasper Burroughs 9/8/2023 Pig Latin Project - uses a phrase
 import java.util.Scanner;
 
 
